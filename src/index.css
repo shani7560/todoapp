@@ -1,0 +1,107 @@
+#root{
+  background-color: #E63D60;
+  /* background-image: linear-gradient(red, yellow); */
+  height: 100vh;
+}
+
+body{
+  margin: unset;
+  display: grid;
+}
+.backgruond1{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  
+}
+.formBackground{
+  background-color: #FFFEFF;
+  /* height: 60vh;  */
+  width: 236px;
+  padding: 20px;
+}
+.textColor{
+  color: #DD9AA1;
+}
+.data-item{
+  padding: 10px;
+}
+.txtSub{
+  margin-left: 4px;
+}
+.txtForm{
+ 
+  display: flex;
+  justify-content: space-between;
+   
+}
+.txtSubmit{
+  background-color: #DDDCDD;
+  text-align: center;
+  color: aliceblue;
+  width: 23px;
+  font-weight: 800;
+  cursor: pointer;
+ 
+}
+
+.textinput{
+  width: 80%;
+}
+.user{
+  margin-top: 20px;
+  position: relative;
+  
+}
+.isCheckBox{
+background-color: gainsboro;
+/* width: 90%;
+position: relative; */
+}
+.isCheck{
+  margin-right: 10px;
+}
+
+.isDelete{
+  margin-left: 205px; 
+  color: red;
+  background-color: red;
+  
+}
+.isDeleteIcon{
+    /* background-color: red;
+    color: white;
+    border: none; */
+    
+ position: absolute;
+ width: 0px;
+ border: none;
+ background-color: red;
+ color: #FFFEFF;
+ right: 0;
+ padding: 0px;
+ /* padding-bottom: 2px; */
+ transition: width 0.5s;
+ /* margin-left: 80px; */
+
+ text-align: center;
+ padding-bottom: 4px;
+}
+.isCheckBox:hover  .isDeleteIcon{
+    width: 25px;
+}
+.inClear{
+  margin: 0px 0px 0px 16px;
+  
+}
+.inFooter{
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+}
+.inShow{
+  margin-left: 20px;
+}
