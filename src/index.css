@@ -18,7 +18,7 @@ body{
   
 }
 .formBackground{
-  background-color: #FFFEFF;
+  background-color: #F4F7FE;
   /* height: 60vh;  */
   width: 236px;
   padding: 20px;
@@ -47,23 +47,34 @@ body{
   cursor: pointer;
  
 }
+.txtBtnColour{
+  background-color: blue;
+}
 
 .textinput{
   width: 80%;
 }
 .user{
-  margin-top: 20px;
+  margin-top: 14px;
   position: relative;
+  animation: myfirst 0.5s 1;
+  animation-direction: alternate;
   
 }
+@keyframes myfirst {
+  0% {background: gainsboro; left: 20px; top: 0px;}
+  25% { left: 0px; top: 0px;}
+	
+  
+}
+
 .isCheckBox{
 background-color: gainsboro;
+width: 98%;
 /* width: 90%;
 position: relative; */
 }
-.isCheck{
-  margin-right: 10px;
-}
+
 
 .isDelete{
   margin-left: 205px; 
@@ -80,28 +91,168 @@ position: relative; */
  width: 0px;
  border: none;
  background-color: red;
- color: #FFFEFF;
+ color: #F4F7FE;
  right: 0;
- padding: 0px;
+ padding: 3px 0px 3px 0px;
  /* padding-bottom: 2px; */
  transition: width 0.5s;
  /* margin-left: 80px; */
 
  text-align: center;
- padding-bottom: 4px;
+ padding-bottom: 1px;
 }
 .isCheckBox:hover  .isDeleteIcon{
     width: 25px;
 }
-.inClear{
-  margin: 0px 0px 0px 16px;
-  
-}
+
 .inFooter{
   margin-top: 50px;
   text-align: center;
   display: flex;
+  justify-content: center;
 }
 .inShow{
   margin-left: 20px;
 }
+.is-DataCheck{
+  display: flex;
+}
+.is-DeleteButton{
+  display: flex;
+    height: 19px;
+    width: 14px;
+    
+}
+
+.isComplete{
+  margin: 15px 0px 0px 0px;
+}
+
+
+.inShow{
+  cursor: pointer;
+  position: relative;
+}
+.inShow:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red ;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.inShow:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+.inClear{
+  margin: 0px 0px 0px 16px;
+  cursor: pointer;
+  position: relative;
+}
+.inClear:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red ;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.inClear:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.iconChart{
+  font-size: 30px;
+}
+.iconeFont{
+  text-align: center;
+}
+.iconBackground{
+  padding: 24px 0px 0px 0px;
+}
+.dataCheck{
+  text-decoration: line-through;
+}
+.checkBoxColour{
+  background-color: #fff;
+}
+.isCheck{
+  margin-right: 5px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  margin-left: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    border: 1px solid;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
+    border: solid red;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  
+}
+    

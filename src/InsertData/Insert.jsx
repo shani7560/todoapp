@@ -2,28 +2,24 @@ import React, { Component } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 class Insert extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     const data = this.props.onDisplay;
-    console.log(data);
+
     const count = this.props.onCount;
 
     const Display = data.map((data, index) => (
       <div className="user" id="isSetCheckbox" key={index.toString()}>
-        {console.log(data)}
-
         <div>
           <div className="isCheckBox">
             <div className="is-DataCheck">
               <input
                 type="checkbox"
-                className="isCheck"
+                className="isCheck "
+                checked={false}
+                onChange={() => {}}
                 onClick={() => this.props.onCheckBox(index)}
               />
+
               {data}
               <button
                 className="isDeleteIcon"
@@ -41,9 +37,9 @@ class Insert extends Component {
     ));
 
     return (
-      <div className="user">
-        {<p>You have {count} pending item </p>}
-        <div>{Display}</div>
+      <div>
+        {count > 0 && <p>You have {count} pending item </p>}
+        <div className="listContainer">{Display}</div>
       </div>
     );
   }
